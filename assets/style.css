@@ -3,11 +3,13 @@
   --black: #000000;
   --white: #fff;
   --theme: #0058e1;
+  --animHero: jumpOne;
 }
 
 html {
   font-size: 16px;
   font-family: "Poppins";
+  scroll-behavior: smooth;
 }
 
 .logo {
@@ -65,6 +67,7 @@ html {
 .hero .hero-header-title {
   font-weight: 700;
   font-size: 2.875rem;
+  animation: fadeDown 800ms ease-out;
 }
 .hero .hero-header-title .highlight {
   color: var(--theme);
@@ -73,6 +76,7 @@ html {
   font-weight: 400;
   font-size: 1.05rem;
   line-height: 29px;
+  animation: fadeUp 900ms ease-out;
 }
 .hero .hero-cta {
   padding: 1.15rem 1.75rem;
@@ -80,6 +84,7 @@ html {
   box-shadow: 0px 2.75954px 51.5115px rgba(0, 0, 0, 0.25);
   border-radius: 14.7176px;
   color: var(--white);
+  animation: fadeUp 900ms ease-out;
 }
 .social-logo-boxes .box {
   width: 54px;
@@ -87,24 +92,50 @@ html {
   border-radius: 10px;
   padding: 4px 10px;
   color: var(--white);
+  position: absolute;
+  transform: translateX(0);
 }
 .social-logo-boxes .boxOne {
   background-color: #021f75;
+  left: 165.66px;
+  top: 10px;
+  transform: rotate(-49.85deg);
+  animation: var(--animHero) 5s linear 0.2s infinite;
 }
 .social-logo-boxes .boxTwo {
   background: linear-gradient(180deg, #093170 0%, #0058e1 100%);
+  left: 0px;
+  top: 175.62px;
+  transform: rotate(-45deg);
+  animation: var(--animHero) 4s linear 0.3s infinite;
 }
 .social-logo-boxes .boxThree {
   background-color: #0058e1;
+  left: 60px;
+  top: 334.46px;
+  transform: rotate(-45deg);
+  animation: var(--animHero) 3.5s linear 0.4s infinite;
 }
 .social-logo-boxes .boxFour {
   background-color: #0058e1;
+  right: 119.3px;
+  top: 0px;
+  transform: rotate(24.96deg);
+  animation: var(--animHero) 4.5s linear 0.5s infinite;
 }
 .social-logo-boxes .boxFive {
-  background-color: linear-gradient(180deg, #093170 0%, #0058e1 100%);
+  background: linear-gradient(180deg, #093170 0%, #0058e1 100%);
+  right: 80.32px;
+  top: 150px;
+  transform: rotate(25deg);
+  animation: var(--animHero) 5.5s linear 0.7s infinite;
 }
 .social-logo-boxes .boxSix {
   background-color: #021f75;
+  right: 180.46px;
+  top: 280.74px;
+  transform: rotate(25deg);
+  animation: var(--animHero) 6s linear 0.8s infinite;
 }
 .welcome {
   margin-top: 150px;
@@ -209,6 +240,21 @@ html {
   color: rgba(255, 255, 255, 0.75);
 }
 
+@keyframes jumpOne {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0), rotate(0);
+    transform: translate3d(0, 0, 0), rotate(0);
+  }
+  40% {
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0), rotate(360deg);
+    transform: translate3d(0, 0, 0), rotate(360deg);
+  }
+}
+
 @keyframes jumpTwo {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -221,5 +267,36 @@ html {
   100% {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
