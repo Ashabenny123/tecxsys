@@ -81,3 +81,45 @@ html {
   border-radius: 14.7176px;
   color: var(--white);
 }
+.welcome {
+  margin-top: 150px;
+  position: relative;
+}
+.welcome .w-content {
+  background: var(--theme);
+  box-shadow: 0px 0px 56px rgba(0, 0, 0, 0.25);
+  border-radius: 18.397px;
+  width: 100%;
+  height: 1182px;
+  padding-top: 550px;
+}
+.welcome .w-cover {
+  position: absolute;
+  width: 90%;
+  min-height: 600px;
+  z-index: 11;
+  left: 50%;
+  top: -120px;
+  transform: translateX(-50%);
+}
+.welcome .w-cover .w-cover-img {
+  filter: drop-shadow(0px 32px 56px rgba(0, 0, 0, 0.25));
+  border-radius: 18.397px;
+}
+.welcome .w-cover .w-logo {
+  position: absolute;
+  z-index: 55;
+  max-width: 100%;
+  border-radius: 50%;
+  left: 50%;
+  top: -90px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0px 32px 56px rgba(0, 0, 0, 0.25));
+}
+.welcome .w-media {
+  position: relative;
+}
+.welcome .w-media img {
+  max-width: 420px;
+  height: auto;
+}
