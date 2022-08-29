@@ -2,6 +2,7 @@
 :root {
   --black: #000000;
   --white: #fff;
+  --theme: #0058e1;
 }
 
 html {
@@ -27,10 +28,10 @@ html {
 .navbar .nav-btn {
   font-weight: 500;
   padding: 10px 23px;
-  border: 1px solid #0058e1;
+  border: 1px solid var(--theme);
 }
 .navbar .nav-btn:hover {
-  background-color: #0058e1;
+  background-color: var(--theme);
   color: var(--white);
 }
 .nav-link.drop-down {
@@ -40,7 +41,7 @@ html {
   padding: 5px 18px;
 }
 .hero {
-  position: absolute;
+  position: relative;
   height: 80vh;
 }
 .hero::before {
@@ -48,8 +49,35 @@ html {
   display: inline-block;
   background-image: url(../assets/images/hero-bg.svg);
   background-repeat: no-repeat;
-  position: relative;
-  width: 400px;
+  position: absolute;
+  width: 100%;
   height: 1200px;
   left: -140px;
+}
+
+.hero .hero-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 460px;
+}
+.hero .hero-header-title {
+  font-weight: 700;
+  font-size: 2.875rem;
+}
+.hero .hero-header-title .highlight {
+  color: var(--theme);
+}
+.hero .hero-header-para {
+  font-weight: 400;
+  font-size: 1.05rem;
+  line-height: 29px;
+}
+.hero .hero-cta {
+  padding: 1.15rem 1.75rem;
+  background: var(--theme);
+  box-shadow: 0px 2.75954px 51.5115px rgba(0, 0, 0, 0.25);
+  border-radius: 14.7176px;
+  color: var(--white);
 }
