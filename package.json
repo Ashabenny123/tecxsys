@@ -1,0 +1,19 @@
+{
+  "name": "tecxsys",
+  "version": "1.0.0",
+  "description": "webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashabenny123/tecxsys.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashabenny123/tecxsys/issues"
+  },
+  "homepage": "https://github.com/Ashabenny123/tecxsys#readme"
+}
